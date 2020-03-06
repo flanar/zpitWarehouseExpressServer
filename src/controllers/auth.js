@@ -15,7 +15,7 @@ const generateTokens = (req, user) => {
             type: 'ACCESS_TOKEN'
         },
         TOKEN_SECRET_JWT, {
-            expiresIn: 120
+            expiresIn: 15
         })
     const REFRESH_TOKEN = jwt.sign({
             sub: user.id,

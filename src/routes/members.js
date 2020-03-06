@@ -5,9 +5,9 @@ import { getMembers, createMember, editMember, deleteMember } from '../controlle
 
 const router = new Router()
 
-router.get('/', getMembers)
-router.post('/', createMember)
-router.put('/:id', editMember)
-router.delete('/:id', deleteMember)
+router.get('/', accessTokenVerify, getMembers)
+router.post('/', accessTokenVerify, createMember)
+router.put('/:id', accessTokenVerify, editMember)
+router.delete('/:id', accessTokenVerify, deleteMember)
 
 export default router

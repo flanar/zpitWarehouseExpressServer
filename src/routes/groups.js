@@ -5,6 +5,6 @@ import { getGroups } from '../controllers/groups'
 
 const router = new Router()
 
-router.get('/', getGroups)
+router.get('/', accessTokenVerify, getGroups)
 
 export default router
